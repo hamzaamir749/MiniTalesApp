@@ -99,7 +99,7 @@ fun Login(
             }
             Button(modifier = Modifier
                 .weight(1f)
-                .padding(start = 16.dp), onClick = { }) {
+                .padding(start = 16.dp), onClick = {onEvents.invoke(LoginUiEvents.Login) }) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_arrow_forward),
                     contentDescription = "App logo"

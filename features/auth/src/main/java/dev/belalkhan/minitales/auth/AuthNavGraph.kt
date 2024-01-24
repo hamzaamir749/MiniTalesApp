@@ -1,5 +1,6 @@
 package dev.belalkhan.minitales.auth
 
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
@@ -27,7 +28,7 @@ fun NavGraphBuilder.authNavGraph(
             navController.navigate(AuthRoute.Login.route)
         }
         composable(AuthRoute.Login.route) {
-            LoginScreen(viewModel())
+            LoginScreen(hiltViewModel())
         }
     }
 }
